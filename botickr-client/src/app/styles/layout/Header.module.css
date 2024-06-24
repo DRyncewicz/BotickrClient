@@ -1,0 +1,38 @@
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1366px;
+    padding: 2rem;
+    border-bottom: 1px solid #19102814;
+}
+
+.content-button{
+    height: 48px;
+    min-width: 48px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 0 1em;
+    display: inline-flex;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+    transition-property: color, background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    background-color: transparent;
+}
+.content-lang-button{
+    margin-left: 2rem;
+}
+.content-button-category{
+    margin-right: 11rem;
+}
+
+.content-button:hover{
+    background-color: rgba(211, 211, 211, 0.6);
+
+}
