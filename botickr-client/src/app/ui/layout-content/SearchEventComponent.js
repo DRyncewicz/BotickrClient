@@ -4,16 +4,23 @@ import styles from '../../styles/layout-content/SearchEventComponent.module.css'
 
 const SearchEventComponent = () => {
     return(<>
-    <section className='search d-flex justify-content-center pb-5'>
-        <form className='w-100 p-3'>
-            <select className='form-select form-select-lg mb-3'>
+<section className='search d-flex justify-content-center pb-5'>
+    <form className='w-100 p-3 d-flex justify-content-center'>
+        <div className='col-2'>
+            <select className='form-select form-select-lg w-100'>
             </select>
-            <select className='form-select form-select-lg mb-3'>
+        </div>
+        <div className='col-2'>
+            <select className='form-select form-select-lg w-100'>
             </select>
-            <select className='form-select form-select-lg mb-3'>
+        </div>
+        <div className='col-2'>
+            <select className='form-select form-select-lg w-100'>
             </select>
-        </form>
-    </section>
+        </div>
+    </form>
+</section>
+
     </>
 )};
 
