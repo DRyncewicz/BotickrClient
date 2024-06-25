@@ -1,0 +1,44 @@
+.btr-carousel-item {
+    width: 15rem;
+    height: 22rem;
+    margin: 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: filter 0.3s ease; 
+}
+
+.carousel-image-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 41, 88, 0.8);
+    transform: translateY(100%);
+    transition: transform 0.3s ease, clip-path 0.5s ease;    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: white;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 100%); 
+}
+
+.btr-carousel-item:hover .carousel-image-box  {
+
+    clip-path: polygon(100% 0%,
+    100% 100%,
+    0% 100%,
+     0% 40%);
+     transform: translateY(0);
+}
+
+.btr-carousel-item:hover .carousel-image {
+    filter: blur(0.5rem); 
+}

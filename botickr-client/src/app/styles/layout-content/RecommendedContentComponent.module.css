@@ -1,0 +1,3 @@
+.carousel :global(.carousel-indicators) {
+    bottom: -50px !important;
+  }

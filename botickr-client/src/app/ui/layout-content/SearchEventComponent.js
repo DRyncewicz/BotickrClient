@@ -26,7 +26,7 @@ const SearchEventComponent = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-    //Add fetch data from backend
+
     const eventDto = [{
         Id: 1,
         Name: "Young leosia BAMBI IRL 2024",
@@ -42,40 +42,39 @@ const SearchEventComponent = () => {
         ImagePath: "https://zooart.com.pl/blog/wp-content/uploads/2022/04/FOTO-SZPIC-NIEMIECKI-OKULARY-1000x667-1.jpg"
     }];
 
-    console.log("Is expanded:", isExpanded);
     return (
         <section className='search mx-5'>
             <div className='container align-items-center'>
                 <div className='d-col justify-content-center align-items-center'>
-                    <form className='d-flex justify-content-center'>
-                    <div className='col-2'>
-                            <input
-                                className='btn btn-light form-select-lg w-100 h-100'
-                                onFocus={handleFocus}
-                            />
-                        </div>
-                        <div className='col-2'>
-                            <input
-                                className='btn btn-light form-select-lg w-100 h-100'
-                                type='button'>
-                            </input>
-                        </div>
-                        <div className='col-2'>
-                            <input
-                                className='btn btn-light form-select-lg w-100 h-100'
-                                type='button'>
-                            </input>
-                        </div>
-                        <div className='col-2'>
-                            <button className='btn btn-dark btn-lg justify-content-center w-100'>
-                                <i className="bi bi-search-heart-fill"></i>
-                                SEARCH
-                            </button>
-                        </div>
-                    </form>
-                    <div className='d-flex justify-content-center'>
+                    <div className={styles.formContainer}> {/* Nowy kontener */}
+                        <form className='d-flex justify-content-center'>
+                            <div className='col-2'>
+                                <input
+                                    className='btn btn-light form-select-lg w-100 h-100'
+                                    onClick={handleFocus}
+                                />
+                            </div>
+                            <div className='col-2'>
+                                <input
+                                    className='btn btn-light form-select-lg w-100 h-100'
+                                    type='button'>
+                                </input>
+                            </div>
+                            <div className='col-2'>
+                                <input
+                                    className='btn btn-light form-select-lg w-100 h-100'
+                                    type='button'>
+                                </input>
+                            </div>
+                            <div className='col-2'>
+                                <button className='btn btn-dark btn-lg justify-content-center w-100'>
+                                    <i className="bi bi-search-heart-fill"></i>
+                                    SEARCH
+                                </button>
+                            </div>
+                        </form>
                         {isExpanded && (
-                            <div className={`col-8 ${styles.eventselect}`} ref={containerRef}>
+                            <div className={`${styles.eventselect}`} ref={containerRef}>
                                 <div className='w-100'>
                                     {eventDto.map((element, index) => (
                                         <SearchEventListComponent key={index} eventDto={element} />
