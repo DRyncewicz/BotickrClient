@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from '../../styles/layout/Header.module.css';
 
-
-
 const Header = () => {
   return (
     <>
