@@ -1,7 +1,20 @@
-.eventselect{
+.formContainer {
+    position: relative;
+    width: 100%;
+}
+
+.eventselect {
+    position: absolute;
+    top: 100%; /* Umieszcza element tuż pod formularzem */
+    left: 0;
+    right: 0;
     background-color: white;
     align-items: start;
     border-style: solid;
     border-color: lightgrey;
     border-width: 0.02cm;
+    z-index: 2;
+    width: 100%; /* Dopasowuje szerokość do formularza */
+    max-width: 66.666667%; /* Odpowiednik col-8 */
+    margin: 0 auto; /* Centruje element */
 }
