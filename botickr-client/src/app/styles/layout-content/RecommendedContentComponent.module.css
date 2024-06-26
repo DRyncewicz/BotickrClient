@@ -1,3 +1,10 @@
 .carousel :global(.carousel-indicators) {
     bottom: -50px !important;
   }
+
+  .carousel :global(.carousel-control-prev){
+    left: -150px !important;
+  }
+  .carousel :global(.carousel-control-next){
+    right: -150px !important;
+  }

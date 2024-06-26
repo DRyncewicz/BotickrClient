@@ -1,6 +1,12 @@
+.btr-carousel-container{
+    width: 14rem;
+    height: 24rem;
+    margin: 0 10px;
+}
+
 .btr-carousel-item {
-    width: 15rem;
-    height: 22rem;
+    width: 14rem;
+    height: 18rem;
     margin: 0 10px;
     overflow: hidden;
     position: relative;
@@ -35,10 +41,31 @@
     clip-path: polygon(100% 0%,
     100% 100%,
     0% 100%,
-     0% 40%);
+     0% 25%);
      transform: translateY(0);
 }
 
 .btr-carousel-item:hover .carousel-image {
     filter: blur(0.5rem); 
+}
+
+.carousel-item-like{
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.carousel-item-like:hover{
+    cursor: pointer;
+}
+
+.carousel-item-button{
+    background-color: rgb(218, 194, 56);
+    width: 80%;
+    height: 2.5rem;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.carousel-item-button:hover{
+    background-color: orange;
+    color: white;
 }
