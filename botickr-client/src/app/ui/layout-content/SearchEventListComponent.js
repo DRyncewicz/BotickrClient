@@ -1,6 +1,8 @@
 "use client";
 import 'bootstrap/dist/css/bootstrap.css';
 import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
+
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from '../../styles/layout-content/SearchEventListComponent.module.css';
 const SearchEventListComponent = ({ eventDto }) => {
@@ -8,8 +10,8 @@ const SearchEventListComponent = ({ eventDto }) => {
 
     const handleClick = () => {
         router.push(`/event/${eventDto.Id}`);
-
     };
+    
     return (
         <>
             <div onClick={handleClick}
