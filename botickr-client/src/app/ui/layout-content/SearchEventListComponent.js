@@ -2,11 +2,15 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-
+import eventDtos from '@/app/temp/EventDtoDataSeed';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from '../../styles/layout-content/SearchEventListComponent.module.css';
-const SearchEventListComponent = ({ eventDto }) => {
+
+const SearchEventListComponent = ({searchString}) => {
     const router = useRouter();
+
+    const eventDto = eventDtos.filter(item =>
+        item?.Name?.toLowerCase()?.includes(searchString?.toLowerCase() ?? ''));
 
     const handleClick = () => {
         router.push(`/event/${eventDto.Id}`);
@@ -14,20 +18,23 @@ const SearchEventListComponent = ({ eventDto }) => {
     
     return (
         <>
+        {eventDto.map(element => (
             <div onClick={handleClick}
-                className={`w-100 d-flex justify-content-start p-3 btr-search-list ${styles['btr-search-list']}`}>
+            key={element.Id}
+                className={`w-100 d-flex justify-content-start p-3 ${styles['btr-search-list']}`}>
                 <div className='col-2'>
-                    <img src={eventDto.ImagePath} width={100} height={50} />
+                    <img src={element.ImagePath} width={100} height={50} />
                 </div>
                 <div className='col-10 d-col mx-2'>
                     <span className='row'>
-                        <b>{eventDto.Name}</b>
+                        <b>{element.Name}</b>
                     </span>
                     <span className='row mx-1'>
-                        {eventDto.StartDate} | {eventDto.City}
+                        {element.StartDate} | {element.City}
                     </span>
                 </div>
             </div>
+        ))}
         </>
     )
 }
