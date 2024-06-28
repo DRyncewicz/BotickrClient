@@ -5,7 +5,7 @@
 
 .eventselect {
     position: absolute;
-    top: 100%; /* Umieszcza element tuż pod formularzem */
+    top: 100%;
     left: 0;
     right: 0;
     background-color: white;
@@ -14,7 +14,27 @@
     border-color: lightgrey;
     border-width: 0.02cm;
     z-index: 2;
-    width: 100%; /* Dopasowuje szerokość do formularza */
-    max-width: 66.666667%; /* Odpowiednik col-8 */
-    margin: 0 auto; /* Centruje element */
+    width: 100%;
+    max-width: 66.666667%; 
+    margin: 0 auto; 
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 27rem;
+}
+
+.locationselect {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    right: 25%;
+    background-color: white;
+    align-items: start;
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 0.02cm;
+    z-index: 2;
+    width: 33.33%; 
+    margin: 0 auto; 
+    overflow-y: scroll;
+    max-height: 17rem;
 }
