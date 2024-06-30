@@ -3,8 +3,8 @@
   }
 
   .carousel :global(.carousel-control-prev){
-    left: -150px !important;
+    left: -180px !important;
   }
   .carousel :global(.carousel-control-next){
-    right: -150px !important;
+    right: -180px !important;
   }
