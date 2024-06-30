@@ -1,4 +1,5 @@
-.header-content{
+.header-content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,7 +9,7 @@
     border-bottom: 1px solid #19102814;
 }
 
-.content-button{
+.content-button {
     height: 48px;
     min-width: 48px;
     font-size: 1rem;
@@ -25,14 +26,110 @@
     transition-timing-function: ease;
     background-color: transparent;
 }
-.content-lang-button{
+
+.content-lang-button {
     margin-left: 2rem;
 }
-.content-button-category{
+
+.content-button-category {
     margin-right: 11rem;
 }
 
-.content-button:hover{
+.content-button:hover {
     background-color: rgba(0, 0, 0, 0.3);
 
 }
+
+.userInfo {
+    position: absolute;
+    top: 5rem;
+    right: -2.5rem;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    width: 220px;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    z-index: 3;
+  }
+  
+  .userInfo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+  
+  .avatar {
+    font-size: 3rem;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .name {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .settings, .logoutBtn, .loginBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .settings {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .settings:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .logoutBtn, .loginBtn {
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .logoutBtn {
+    background-color: #ff6b6b;
+    color: white;
+  }
+  
+  .logoutBtn:hover {
+    background-color: #ff5252;
+  }
+  
+  .loginBtn {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .loginBtn:hover {
+    background-color: #3a7bd5;
+  }
+  
+  .loggedOut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .loggedOut i {
+    font-size: 3rem;
+    color: #ccc;
+  }
