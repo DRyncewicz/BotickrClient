@@ -5,9 +5,6 @@ import RecommendedContentComponent from '../layout-content/RecommendedContentCom
 const MainLayout = () => {
   return (
 <>
-    <div className='header'>
-        <Header />
-    </div>
     <div className='z-1 p-5 w-100'>
       <SearchEventComponent/>
     </div>
