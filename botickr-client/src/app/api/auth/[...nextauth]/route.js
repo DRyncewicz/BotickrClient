@@ -22,6 +22,7 @@ export const authOptions = {
                     id: profile.sub,
                     name: profile.name,
                     email: profile.email,
+                    user_type: profile.user_type
                 }
             },
         }),
