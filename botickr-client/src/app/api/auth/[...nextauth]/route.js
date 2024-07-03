@@ -30,16 +30,18 @@ export const authOptions = {
     secret: process.env.NEXT_PUBLIC_NEXTAUTH_SECRET,
     debug: true,
     callbacks: {
-        async jwt({ token, user, account, profile }) {
-            if (profile) {
-                token = { ...token, ...profile };
+        async jwt({ token, account }) {
+            if (account?.id_token) {
+              token.idToken = account.id_token;
+              token.accessToken = account.accessToken
             }
             return token;
-        },
-        async session({ session, token }) {
-            session.user = { ...session.user, ...token };
+          },
+          async session({ session, token }) {
+            session.idToken = token.idToken;
             return session;
-        },
+          },
+      
     },
     logger: {
         error: (code, metadata) => {

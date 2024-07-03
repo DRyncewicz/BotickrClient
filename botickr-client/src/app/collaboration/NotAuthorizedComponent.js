@@ -8,14 +8,13 @@ export default function NotAuthorizedComponent() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Tutaj dodaj logikę obsługi formularza
     };
 
     if (status === "loading") {
         return <div>Loading...</div>;
     }
-
-    if (session?.user.user_role !== 'organizer') {
+    console.log(session?.user.user_type)
+    if (session?.user.user_type !== 'organizer') {
         return (
             <div className="d-flex flex-column justify-content-center align-items-center mt-3">
                 <h1>Want to cooperate?</h1>
@@ -46,7 +45,6 @@ export default function NotAuthorizedComponent() {
                                 Submit
                             </Button>
                         </div>
-
                     </Form>
                 </div>
             </div>
