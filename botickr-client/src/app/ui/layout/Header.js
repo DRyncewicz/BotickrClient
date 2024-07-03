@@ -14,7 +14,6 @@ const Header = () => {
   const handleUserClick = () => {
     setUserInfoExpanded(!userInfoExpanded);
   };
-
   const userInfoRef = useRef(null);
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -29,6 +28,23 @@ const Header = () => {
     };
 
   }, []);
+
+  const handleLogout = async () => {
+    if (session?.idToken) {
+      try {
+        const response = await fetch(`/api/logout?idToken=${encodeURIComponent(session.idToken)}`);
+        if (response.ok) {
+          await signOut({ callbackUrl: '/' });
+        } else {
+          console.error('Logout failed');
+        }
+      } catch (error) {
+        console.error('Logout error:', error);
+      }
+    } else {
+      await signOut({ callbackUrl: '' });
+    }
+  };
   return (
     <>
       <div className={styles['header-content']}>
@@ -64,7 +80,7 @@ const Header = () => {
                   <a href='/settings' className={styles.settings}>
                     <i className="bi bi-gear"></i> Settings
                   </a>
-                  <button onClick={() => signOut()} className={styles.logoutBtn}>
+                  <button onClick={() => handleLogout()} className={styles.logoutBtn}>
                     <i className="bi bi-box-arrow-right"></i> Log out
                   </button>
                 </div>
