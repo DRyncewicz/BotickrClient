@@ -1,32 +1,5 @@
-.organizer-card {
-    background-color: rgb(255, 255, 255, 0.4);
-    width: 25rem;
-    height: 40rem;
-    position: relative;
-    overflow: hidden; 
-    transition: box-shadow 0.5s ease, width 0.5s ease, height 0.5s ease;
-}
-
-.organizer-card:hover {
-    -webkit-box-shadow: 0px 0px 62px -20px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 0px 0px 62px -20px rgba(66, 68, 90, 1);
-    box-shadow: 0px 0px 62px -20px rgba(66, 68, 90, 1);
-    width: 26rem;
-    height: 41rem;
-}
-
-.organizer-card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 6rem); 
-    transform: translateY(calc(100%));
-    display: flex;
-    background-color: rgb(255,230,0, 0.7);
-    transition: transform 0.5s ease, background-color 0.5s ease;
-}
-
-.organizer-card:hover .organizer-card-content {
-    transform: translateY(0);
+.user-event-box{
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 1px;
 }

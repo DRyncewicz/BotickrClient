@@ -13,8 +13,7 @@ export default function NotAuthorizedComponent() {
     if (status === "loading") {
         return <div>Loading...</div>;
     }
-    console.log(session?.user.user_type)
-    if (session?.user.user_type !== 'organizer') {
+    if (session?.user?.user_type !== 'organizer') {
         return (
             <div className="d-flex flex-column justify-content-center align-items-center mt-3">
                 <h1>Want to cooperate?</h1>
