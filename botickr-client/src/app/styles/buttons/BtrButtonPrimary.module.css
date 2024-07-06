@@ -1,0 +1,11 @@
+.btrButton{
+    background-color: rgb(218, 194, 56);
+    width: 80%;
+    height: 2.5rem;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.btrButton:hover{
+    background-color: orange;
+    color: white;
+}
