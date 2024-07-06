@@ -6,10 +6,18 @@ import styles from '../../styles/layout/Header.module.css';
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import BtrPopup from '../popups/BtrPopup';
+import TicketForm from '@/app/collaboration/new-event/ticketForm';
+import CollaborationOrganizerPopup from '../popups/Collaboration/CollaborationOrganizerPopup';
 
 
 const Header = () => {
   const { data: session, status } = useSession();
+  const [isPopupVisible, setPopupVisibility] = useState(false);
+
+  const handleChangePopupVisibility = (e) => {
+    setPopupVisibility(e);
+  }
   const [userInfoExpanded, setUserInfoExpanded] = useState(false);
   const handleUserClick = () => {
     setUserInfoExpanded(!userInfoExpanded);
@@ -45,6 +53,7 @@ const Header = () => {
       await signOut({ callbackUrl: '' });
     }
   };
+
   return (
     <>
       <div className={styles['header-content']}>
@@ -56,11 +65,15 @@ const Header = () => {
           Categories
         </button>
         <button className={styles['content-button']}> Future functions</button>
-        <Link href="/collaboration">
-          <button className={styles['content-button']}>
+          <button className={styles['content-button']}
+            onClick={() => handleChangePopupVisibility(true)}>
             Collaboration
           </button>
-        </Link>        <button className={styles['content-button']}> Newsletter</button>
+          <BtrPopup isOpen={isPopupVisible}
+            onClose={() => handleChangePopupVisibility(false)}>
+              <CollaborationOrganizerPopup/>
+              </BtrPopup>
+        <button className={styles['content-button']}> Newsletter</button>
         <button className={`${styles['content-button']} ${styles['content-lang-button']}`}> EN
           <i className="bi bi-arrow-down"></i>
 

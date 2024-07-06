@@ -1,4 +1,15 @@
 .ticket-container{
-    border-style: solid;
     min-width: 326px;
+}
+.border-solid{
+    border-style: solid;
+    min-width: 326px
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.error-validation{
+    color: red;
 }

@@ -9,8 +9,15 @@ export default function Home() {
 
     return (
         <>
-            <div className='w-100 d-flex justify-content-center'>
+            <div className='col-12 d-flex flex-row'>
+            <div className='col-6'>
+
+
+                </div>
+                <div className='col-6 d-flex justify-content-end p-3'>
                 <TicketForm />
+
+                </div>
             </div>
 
         </>
