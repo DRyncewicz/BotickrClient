@@ -7,7 +7,6 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import BtrPopup from '../popups/BtrPopup';
-import TicketForm from '@/app/collaboration/new-event/ticketForm';
 import CollaborationOrganizerPopup from '../popups/Collaboration/CollaborationOrganizerPopup';
 
 
