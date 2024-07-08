@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useState, useRef, useEffect } from 'react';
 import { FormGroup } from 'react-bootstrap';
-import styles from '../../styles/collaboration/new-event/ticketForm.module.css'
+import styles from '../../../styles/collaboration/new-event/ticketForm.module.css'
 import Pagination from 'react-bootstrap/Pagination';
 import BtrButtonPrimary from '@/app/ui/buttons/BtrButtonPrimary';
 

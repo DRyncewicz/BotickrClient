@@ -27,7 +27,7 @@ export default function CollaborationOrganizerPopup() {
             </nav>
             <div className={styles.content}>
                 {activeTab === 'create' && <CreateNewEvent />}
-                {/* Dodaj inne komponenty dla pozostałych zakładek */}
+                {}
             </div>
         </div>
     )
